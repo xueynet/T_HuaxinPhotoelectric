@@ -10,12 +10,12 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="main-content">
-                        <h1>搜索</h1>
+                        <h1>search</h1>
                         <div class="breadcrumb-area">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb d-flex justify-content-center">
-                                    <a href="/" class="breadcrumb-item">首页</a>
-                                    <a href="#" class="breadcrumb-item active">搜索</a>
+                                    <a href="/" class="breadcrumb-item">home </a>
+                                    <a href="#" class="breadcrumb-item active">search</a>
                                 </ol>
                             </nav>
                         </div>
@@ -28,11 +28,11 @@
         <div class="heading-area">
             <div class="subscribe d-flex">
                 <input type="email" id="searchInput" placeholder="请填写关键字内容">
-                <button class="cmn-btn" onclick="search()">搜索</button>
+                <button class="cmn-btn" onclick="search()">search</button>
                 <script>
                     function search(){
                         var word = document.getElementById('searchInput').value
-                        window.location.href = "/search.html?word="+ word
+                        window.location.href = "/en/search.html?word="+ word
                     }
                 </script>
             </div>
@@ -82,18 +82,18 @@
                 <stl:pageItems>
                     <stl:pageItem type="FirstPage">
                         <stl:yes>
-                                <a href="{Current.Url}">首页</a>
+                                <a href="{Current.Url}">home</a>
                         </stl:yes>	
                         <stl:no>
-                                <b>首页</b>
+                                <b>home</b>
                         </stl:no>
                     </stl:pageItem>
                     <stl:pageItem type="PreviousPage">
                         <stl:yes>
-                                <a href="{Current.Url}">上一页</a>
+                                <a href="{Current.Url}">previous</a>
                         </stl:yes>	
                         <stl:no>
-                                <b>上一页</b>
+                                <b>previous</b>
                         </stl:no>
                     </stl:pageItem>
                     <stl:pageItem type="PageNavigation" listNum="3">
@@ -106,18 +106,18 @@
                     </stl:pageItem>
                     <stl:pageItem type="NextPage">
                         <stl:yes>
-                                <a href="{Current.Url}">下一页</a>
+                                <a href="{Current.Url}">next</a>
                         </stl:yes>	
                         <stl:no>
-                                <b>下一页</b>
+                                <b>next</b>
                         </stl:no>
                     </stl:pageItem>
                     <stl:pageItem type="LastPage">
                         <stl:yes>
-                                <a href="{Current.Url}">尾页</a>
+                                <a href="{Current.Url}">Last</a>
                         </stl:yes>	
                         <stl:no>
-                                <b>尾页</b>
+                                <b>Last</b>
                         </stl:no>
                     </stl:pageItem>
                 </stl:pageItems>

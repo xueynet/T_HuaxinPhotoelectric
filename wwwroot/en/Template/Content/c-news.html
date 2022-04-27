@@ -5,31 +5,19 @@
         <div class="shop-details-content">
             <div class="row justify-content-center cus-pad">
                 <div class="col-lg-6">
-                    <div class="xzoom-container">
-                        <stl:image class="xzoom5" id="xzoom-magnific"></stl:image>
-                        <div class="xzoom-thumbs">
-                            <div class="all-slider">
-                                <stl:each type="ImageUrl">
-                                    <a><stl:image class="xzoom-gallery5"></stl:image></a>
-                                </stl:each>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6">
                     <div class="right-item">
                         <h4>{content.title}</h4>
-                        <p>{content.subTitle}</p>
-                        <div class="review">
-                        </div>
-                        <div class="prize mb-30">
-                            <p>{content.OldPrice}{content.PriceUnit}</p>
-                        </div>
+                        <p class="mb-30">{content.subTitle}</p>
                         <div class="bottom-area d-flex align-items-center">
-                            <h5>{content.Price}{content.PriceUnit}</h5>
+                            <h5>{content.addDate}</h5>
+                            <stl:if testtype="author">
+                                <stl:yes>
+                                    <h5>{content.author}</h5>
+                                </stl:yes>
+                            </stl:if>
                         </div>
                         <div class="social d-flex align-items-center">
-                            <p>联系:</p>
+                            <p>contact:</p>
                             <stl:include file="/include/lx.html"></stl:include>
                         </div>
                     </div>
@@ -44,11 +32,11 @@
             <ul class="nav nav-tabs" id="myTab" role="tablist">
                 <li class="nav-item">
                     <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab"
-                        aria-controls="description" aria-selected="true">详情</a>
+                        aria-controls="description" aria-selected="true">details</a>
                 </li>
                 <li class="nav-item" id="iscomments">
                     <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab"
-                        aria-controls="reviews" aria-selected="false">评论</a>
+                        aria-controls="reviews" aria-selected="false">comments</a>
                 </li>
             </ul>
             <div class="tab-content" id="myTabContent">
@@ -62,7 +50,7 @@
                         <stl:no>
                             <div class="queshenye">
                                 <img src="/images/nolist.png"/>
-                                <p>暂无内容</p>
+                                <p>No content</p>
                             </div>
                         </stl:no>
                     </stl:if>

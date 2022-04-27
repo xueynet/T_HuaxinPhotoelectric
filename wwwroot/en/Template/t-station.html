@@ -1,0 +1,91 @@
+<stl:include file="/include/header.html"></stl:include>
+<stl:include file="/include/breadcrumb.html"></stl:include>
+<section id="how-works-section">
+    <div class="overlay pt-120 pb-120">
+        <div class="container wow fadeInUp">
+            <div class="row news">
+                <stl:pageContents pageNum="21" scope="all">
+                    <stl:a class="single-item col-12">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                                <stl:if testtype="ImageUrl">
+                                    <stl:yes>
+                                        <stl:image class="top-img"></stl:image>
+                                    </stl:yes>
+                                    <stl:no>
+                                        <img src="{Stl.StieUrl}/images/noimg.png"/>
+                                    </stl:no>
+                                </stl:if>
+                            </div>
+                            <div class="col-lg-9 col-md-9">
+                                <div class="mid-area">
+                                    <h4>{content.title}</h4>
+                                    <p>{content.subTitle}</p>
+                                    <div class="title-bottom"></div>
+                                    <div class="d-flex">
+                                        <div class="date-area bg">
+                                            <span class="time">{content.addDate}</span>
+                                        </div>
+                                        <stl:if testtype="author">
+                                            <stl:yes>
+                                                <div class="date-area bg">
+                                                    <span class="author">{content.author}</span>
+                                                </div>
+                                            </stl:yes>
+                                        </stl:if>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </stl:a>
+                </stl:pageContents>
+                <stl:include file="/include/nolist.html"></stl:include>
+                <div class="pagelist">
+                    <stl:pageItems>
+                        <stl:pageItem type="FirstPage">
+                            <stl:yes>
+                                    <a href="{Current.Url}">home</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>home</b>
+                            </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="PreviousPage">
+                            <stl:yes>
+                                    <a href="{Current.Url}">previous</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>previous</b>
+                            </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="PageNavigation" listNum="3">
+                            <stl:yes>
+                                    <a href="{Current.Url}">{Current.Num}</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>{Current.Num}</b>
+                            </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="NextPage">
+                            <stl:yes>
+                                    <a href="{Current.Url}">next</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>next</b>
+                            </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="LastPage">
+                            <stl:yes>
+                                    <a href="{Current.Url}">Last</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>Last</b>
+                            </stl:no>
+                        </stl:pageItem>
+                    </stl:pageItems>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<stl:include file="/include/footer.html"></stl:include>

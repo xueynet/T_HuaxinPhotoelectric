@@ -53,15 +53,15 @@ h1,h2,h3,h4,h5,h6 {
     color: var(--body-color);
 }
   h1, h1>a {
-    font-size: 76px;
+    font-size: 66px;
     line-height: 91px;
   }
   h2, h2>a {
-    font-size: 57px;
+    font-size: 47px;
     line-height: 68px;
   }
   h3, h3>a {
-    font-size: 43px;
+    font-size: 40px;
     line-height: 52px;
   }
   h4, h4>a {
@@ -333,6 +333,11 @@ body::-webkit-scrollbar-thumb:hover {
 @media (max-width: 991px) {
     .menu_has_children .sub-menu {
         display: none !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        visibility: hidden !important;
+        opacity: 0 !important;
+        pointer-events: none;
     }
     .menu_has_children .sub-menu li {
         width: 100% ;
@@ -717,9 +722,11 @@ body::-webkit-scrollbar-thumb:hover {
 .leftnav .list{
     margin-top: 30px;
 }
-
+.stl_no{
+    color: #fff;
+}
 .whitebox{
-    background: #ededed30;
+    background: #edededaa;
     border-radius: 5px;
     padding: 30px 50px;
 }
@@ -1007,6 +1014,9 @@ body::-webkit-scrollbar-thumb:hover {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+}
+#available-game-section .main-container .single-item a .main-content br{
+    display: none;
 }
 #available-game-section .main-container .single-item a:hover img{
     transform: translateY(-50%);

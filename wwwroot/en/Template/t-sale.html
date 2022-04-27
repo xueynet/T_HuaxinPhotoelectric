@@ -1,0 +1,125 @@
+<stl:include file="/include/header.html"></stl:include>
+<stl:include file="/include/breadcrumb.html"></stl:include>
+<section id="team-section" class="pb-120">
+    <div class="overlay pt-120">
+        <div class="container wow fadeInUp">
+            <div class="row">
+                <div class="col-lg-3 statistics-area">
+                    <div class="sidebar-area">
+                        <div class="title-area">
+                            <h5><stl:channel channelIndex="translate"></stl:channel></h5>
+                            <p class="text-sm"><stl:channel channelIndex="translate" type="content"></stl:channel></p>
+                        </div>
+                        <ul>
+                            <stl:channels channelIndex="translate">
+                                <stl:if testType="UpChannelOrSelf">
+                                    <stl:yes>
+                                        <li class="active">
+                                            <stl:a class="flex-fill d-flex justify-content-between">
+                                                <span>{channel.title}</span>
+                                                <img src="{Stl.StieUrl}/images/right-icon.png" alt="image">
+                                            </stl:a>
+                                        </li>
+                                    </stl:yes>
+                                    <stl:no> 
+                                        <li>
+                                            <stl:a class="flex-fill d-flex justify-content-between">
+                                                <span>{channel.title}</span>
+                                                <img src="{Stl.StieUrl}/images/right-icon.png" alt="image">
+                                            </stl:a>
+                                        </li>
+                                    </stl:no>
+                                </stl:if>
+                            </stl:channels>
+                        </ul>
+                    </div>
+                </div>  
+                <div class="col-lg-9">
+                    <div class="row">
+                        <stl:pageContents pageNum="21" scope="all">
+                            <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center">
+                                <stl:a class="single-item text-center">
+                                    <div class="top-item text-center">
+                                        <stl:image></stl:image>
+                                        <div class="social-area">
+                                            <p href="#" style="padding: 5px 0;">Contact</p>
+                                        </div>
+                                    </div>
+                                    <div class="bottom-area">
+                                        <h5>{content.title}</h5>
+                                        <p>{content.subTitle}</p>
+                                    </div>
+                                </stl:a>
+                            </div>
+                        </stl:pageContents>
+                    </div>
+                    <stl:include file="/include/nolist.html"></stl:include>
+                    <div class="pagelist">
+                        <stl:pageItems>
+                            <stl:pageItem type="FirstPage">
+                                <stl:yes>
+                                        <a href="{Current.Url}">home</a>
+                                </stl:yes>	
+                                <stl:no>
+                                        <b>home</b>
+                                </stl:no>
+                            </stl:pageItem>
+                            <stl:pageItem type="PreviousPage">
+                                <stl:yes>
+                                        <a href="{Current.Url}">previous</a>
+                                </stl:yes>	
+                                <stl:no>
+                                        <b>previous</b>
+                                </stl:no>
+                            </stl:pageItem>
+                            <stl:pageItem type="PageNavigation" listNum="3">
+                                <stl:yes>
+                                        <a href="{Current.Url}">{Current.Num}</a>
+                                </stl:yes>	
+                                <stl:no>
+                                        <b>{Current.Num}</b>
+                                </stl:no>
+                            </stl:pageItem>
+                            <stl:pageItem type="NextPage">
+                                <stl:yes>
+                                        <a href="{Current.Url}">next</a>
+                                </stl:yes>	
+                                <stl:no>
+                                        <b>next</b>
+                                </stl:no>
+                            </stl:pageItem>
+                            <stl:pageItem type="LastPage">
+                                <stl:yes>
+                                        <a href="{Current.Url}">Last</a>
+                                </stl:yes>	
+                                <stl:no>
+                                        <b>Last</b>
+                                </stl:no>
+                            </stl:pageItem>
+                        </stl:pageItems>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="policy-section" class="pb-120">
+    <div class="container">
+        <div class="main-content">
+            <div class="row cus-m">
+                <stl:contents channelIndex="ensure">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-box text-center">
+                            <div class="img-area text-center">
+                                <stl:image></stl:image>
+                            </div>
+                            <h5>{content.title}</h5>
+                            <p class="text-sm">{content.subtitle}</p>
+                        </div>
+                    </div>
+                </stl:contents>
+            </div>
+        </div>
+    </div>
+</section>
+<stl:include file="/include/footer.html"></stl:include>

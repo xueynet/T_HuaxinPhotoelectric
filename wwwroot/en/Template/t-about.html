@@ -1,0 +1,170 @@
+<stl:include file="/include/header.html"></stl:include>
+<stl:include file="/include/breadcrumb.html"></stl:include>
+<section id="about-us-section">
+    <div class="overlay pt-120">
+        <div class="container wow fadeInUp">
+            <div class="main-container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col-lg-8">
+                        <div class="section-header text-center">
+                            <stl:contents totalNum="1">
+                                <h2 class="title">{content.title}</h2>
+                                <p>{content.subtitle}</p>
+                                <stl:a class="cmn-btn">Learn more</stl:a>
+                            </stl:contents>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<stl:channels>
+    <stl:if testtype="OddItem">
+        <stl:yes>
+            <stl:contents>
+                <section style="margin: 100px auto;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 d-flex align-items-center">
+                                <div class="section-header">
+                                    <h2 class="title">{content.title}</h2>
+                                    <p class="mb-30">{content.subtitle}</p>
+                                    <stl:a class="cmn-btn">Learn more</stl:a>
+                                </div>
+                            </div>
+                            <div class="col-lg-7 col-md-7 d-flex align-items-center">
+                                <div class="right-area">
+                                    <stl:image></stl:image>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </stl:contents>
+        </stl:yes>
+        <stl:no>
+            <stl:contents>
+                <section style="margin: 100px auto;">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-7 col-md-7 d-flex align-items-center">
+                                <div class="right-area">
+                                    <stl:image></stl:image>
+                                </div>
+                            </div>
+                            <div class="col-lg-5 col-md-5 d-flex align-items-center">
+                                <div class="section-header">
+                                    <h2 class="title">{content.title}</h2>
+                                    <p class="mb-30">{content.subtitle}</p>
+                                    <stl:a class="cmn-btn">Learn more</stl:a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </stl:contents>
+        </stl:no>
+    </stl:if>
+    
+</stl:channels>
+<section id="counter-section">
+    <div class="overlay pt-120 pb-120">
+        <div class="container">
+            <div class="row mp-none">
+                <stl:contents totalNum="4" channelIndex="counter">
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="single-item text-center">
+                            <div class="img-area">
+                                <stl:image></stl:image>
+                            </div>
+                            <h3><span class="counter">{content.subtitle}</span>{content.Source}</h3>
+                            <p>{content.title}</p>
+                        </div>
+                    </div>
+                </stl:contents>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="features-section" class="border-area">
+    <div class="overlay pt-120">
+        <div class="container wow fadeInUp">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="section-header text-center">
+                        <h2 class="title"><stl:channel channelIndex="case"></stl:channel></h2>
+                        <p><stl:channel channelIndex="case" type="content"></stl:channel></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row pm-none" >
+                <stl:channels channelIndex="case" groupChannel="case">
+                    <div class="col-lg-4 col-md-6 col-sm-6">
+                        <div class="single-item text-center">
+                            <div class="img-area">
+                                <stl:image alt="image"></stl:image>
+                            </div>
+                            <h5>{channel.title}</h5>
+                            <p>{channel.content}</p>
+                        </div>
+                    </div>
+                </stl:channels>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="call-to-action">
+    <div class="overlay pt-120 pb-120">
+        <div class="container">
+            <div class="main-content">
+                <div class="row d-sm-flex justify-content-sm-end">
+                    <div class="col-lg-4 col-md-1">
+                        <img class="left" src="{Stl.StieUrl}/images/call-to-action-left.png" alt="image">
+                    </div>
+                    <div class="col-lg-4 col-md-5 col-sm-5 d-flex align-items-center">
+                        <stl:channels totalNum="1" channelIndex="case">
+                            <div class="section-item">
+                                <h4 class="mb-30">{channel.title}</h4>
+                                <p>{channel.content}</p>
+                            </div>
+                        </stl:channels>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center justify-content-sm-end align-items-center">
+                        <div class="btn-area d-flex justify-content-center justify-content-sm-end align-items-center">
+                            <stl:a channelIndex="case" class="cmn-btn">Learn more</stl:a>
+                        </div>
+                        <img src="{Stl.StieUrl}/images/call-to-action-right.png" alt="image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="how-works-section" class="border-area">
+    <div class="overlay pt-120 pb-120">
+        <div class="container wow fadeInUp">
+            <div class="row d-flex justify-content-center">
+                <div class="col-lg-6 text-center">
+                    <div class="section-header">
+                        <h2 class="title"><stl:channel channelIndex="partners"></stl:channel></h2>
+                        <p><stl:channel channelIndex="partners" type="content"></stl:channel></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row mp-top partners">
+                <stl:contents channelIndex="partners" total="24">
+                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
+                        <div class="item">
+                            <stl:image alt="image"></stl:image>
+                            <div class="main-content d-flex justify-content-center align-items-center">
+                                <h3>{content.title}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </stl:contents>
+            </div>
+        </div>
+    </div>
+</section>
+<stl:include file="/include/footer.html"></stl:include>

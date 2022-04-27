@@ -20,17 +20,17 @@
     </stl:if>
 
     <!-- css-section -->
-    <link rel="apple-touch-icon" href="{Stl.StieUrl}/favicon.ico">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/bootstrap.min.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/fontawesome.min.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/slick.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/magnific-popup.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/nice-select.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/xzoom.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/owl.carousel.min.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/animate.css">
-    <link rel="stylesheet" href="{Stl.StieUrl}/css/style.css?v211ww11ww1ww11wwww11wwww1w121111">
+    <link rel="apple-touch-icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/fontawesome.min.css">
+    <link rel="stylesheet" href="/css/slick.css">
+    <link rel="stylesheet" href="/css/magnific-popup.css">
+    <link rel="stylesheet" href="/css/nice-select.css">
+    <link rel="stylesheet" href="/css/xzoom.css">
+    <link rel="stylesheet" href="/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="/css/animate.css">
+    <link rel="stylesheet" href="/css/style.css?v211ww11ww1w11wwwww1w1www1w121111">
 </head>
 <body>
     <!-- loading-section -->
@@ -45,7 +45,7 @@
             <div class="container">
                 <div class="row d-flex header-area">
                     <div class="logo-section flex-grow-1 d-flex align-items-center">
-                        <a class="site-logo site-title" href="/">
+                        <a class="site-logo site-title" href="/en">
                           <stl:image src="{Stl.SiteImageUrl}" alt="site-logo"></stl:image>
                         </a>
                     </div>
@@ -59,10 +59,10 @@
                             <ul class="navbar-nav main-menu ml-auto">
                               <stl:if type="TemplateType" op="Equals" value="IndexPageTemplate">
                                 <stl:yes>
-                                  <li><a href="/" class="active">首页</a></li>
+                                  <li><a href="/en" class="active">home</a></li>
                                 </stl:yes>
                                 <stl:no>
-                                  <li><a href="/">首页</a></li>
+                                  <li><a href="/en">home</a></li>
                                 </stl:no>
                               </stl:if>
                               <stl:channels topLevel="0" groupChannel="nav">
@@ -102,7 +102,7 @@
                     </nav>
                     <div class="right-area header-action d-flex align-items-center">
                         <div class="search-icon">
-                            <a href="/search.html"><img src="{Stl.StieUrl}/images/search_btn.png" alt="icon"></a>
+                            <a href="/en/search.html"><img src="/images/search_btn.png" alt="icon"></a>
                         </div>
                         <div class="lang d-flex align-items-center">
                             <select id="language" onchange="language()">
@@ -136,7 +136,7 @@
                             <stl:a href="{stl.HomeUrl}" class="login-btn">{user.displayName}</stl:a>
                           </stl:yes>
                           <stl:no>
-                            <stl:a href="{stl.LoginUrl}" class="cmn-btn">注册/登录</stl:a>
+                            <stl:a href="{stl.LoginUrl}" class="cmn-btn">join / login</stl:a>
                           </stl:no>
                         </stl:if>
                     </div>

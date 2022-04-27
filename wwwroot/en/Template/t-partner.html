@@ -1,0 +1,75 @@
+<stl:include file="/include/header.html"></stl:include>
+<stl:include file="/include/breadcrumb.html"></stl:include>
+<section id="how-works-section">
+    <div class="overlay pt-120 pb-120">
+        <div class="container wow fadeInUp">
+            <div class="row">
+                <div class="col-lg-3 statistics-area">
+                    <div class="sidebar-area">
+                        <div class="title-area">
+                            <h5><stl:channel channelIndex="translate"></stl:channel></h5>
+                            <p class="text-sm"><stl:channel channelIndex="translate" type="content"></stl:channel></p>
+                        </div>
+                        <ul>
+                            <stl:channels channelIndex="translate">
+                                <stl:if testType="UpChannelOrSelf">
+                                    <stl:yes>
+                                        <li class="active">
+                                            <stl:a class="flex-fill d-flex justify-content-between">
+                                                <span>{channel.title}</span>
+                                                <img src="{Stl.StieUrl}/images/right-icon.png" alt="image">
+                                            </stl:a>
+                                        </li>
+                                    </stl:yes>
+                                    <stl:no> 
+                                        <li>
+                                            <stl:a class="flex-fill d-flex justify-content-between">
+                                                <span>{channel.title}</span>
+                                                <img src="{Stl.StieUrl}/images/right-icon.png" alt="image">
+                                            </stl:a>
+                                        </li>
+                                    </stl:no>
+                                </stl:if>
+                            </stl:channels>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row partners">
+                        <stl:contents scope="all">
+                            <div class="col-lg-3 col-md-3 col-sm-4 col-6">
+                                <stl:a class="item">
+                                    <stl:image alt="image"></stl:image>
+                                    <div class="main-content d-flex justify-content-center align-items-center">
+                                        <h3>{content.title}</h3>
+                                    </div>
+                                </stl:a>
+                            </div>
+                        </stl:contents>
+                    </div>
+                    <stl:include file="/include/nolist.html"></stl:include>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="policy-section" class="pb-120">
+    <div class="container">
+        <div class="main-content">
+            <div class="row cus-m">
+                <stl:contents channelIndex="ensure">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-box text-center">
+                            <div class="img-area text-center">
+                                <stl:image></stl:image>
+                            </div>
+                            <h5>{content.title}</h5>
+                            <p class="text-sm">{content.subtitle}</p>
+                        </div>
+                    </div>
+                </stl:contents>
+            </div>
+        </div>
+    </div>
+</section>
+<stl:include file="/include/footer.html"></stl:include>
