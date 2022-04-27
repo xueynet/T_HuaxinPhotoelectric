@@ -1,0 +1,58 @@
+<section id="banner-section" class="inner-banner">
+    <div class="ani-img">
+        <img class="img-1" src="{Stl.StieUrl}/images/banner-circle-1.png" alt="icon">
+        <img class="img-2" src="{Stl.StieUrl}/images/banner-circle-2.png" alt="icon">
+        <img class="img-3" src="{Stl.StieUrl}/images/banner-circle-2.png" alt="icon">
+    </div>
+    <div class="banner-content d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="main-content">
+                        <h1>{channel.title}</h1>
+                        <div class="breadcrumb-area">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb d-flex justify-content-center">
+                                    <stl:location 
+                                        linkClass="breadcrumb-item" 
+                                        activeLinkClass="breadcrumb-item active" 
+                                        separator=" "></stl:location>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container" id="pagebanner">
+        <div class="testimonials-carousel d-flex align-items-center">
+            <stl:contents isTop="true" isImage="true" totalNum="5" scope="all">
+                <div class="bottom-item">
+                    <div class="row">
+                        <div class="col-lg-5">
+                            <div class="left-item">
+                                <p class="text-sm">{content.addDate}</p>
+                                <h4>{content.title}</h4>
+                                <div class="btn-area">
+                                    <stl:a class="cmn-btn">了解更多</stl:a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-7">
+                            <div class="right-area">
+                                <stl:image class="img-char" alt="image"></stl:image>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </stl:contents>
+        </div>
+        <script>
+            var list = {stl:contents isTop=true isImage=true scope=all}
+            if(list.length === 0){
+                document.getElementById('pagebanner').remove()
+            }
+        </script>
+    </div>
+</section>

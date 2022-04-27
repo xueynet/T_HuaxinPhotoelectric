@@ -1,0 +1,120 @@
+<stl:include file="/include/header.html"></stl:include>
+<stl:include file="/include/breadcrumb.html"></stl:include>
+<section id="featured-products" class="pt-120 pb-120">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 statistics-area">
+                <div class="sidebar-area">
+                    <div class="title-area">
+                        <h5><stl:channel channelIndex="case"></stl:channel></h5>
+                        <p class="text-sm"><stl:channel channelIndex="case" type="content"></stl:channel></p>
+                    </div>
+                    <ul>
+                        <stl:channels channelIndex="case">
+                            <stl:if testType="UpChannelOrSelf">
+                                <stl:yes>
+                                    <li class="active">
+                                        <stl:a class="flex-fill d-flex justify-content-between">
+                                            <span>{channel.title}</span>
+                                            <img src="{Stl.StieUrl}/images/right-icon.png" alt="image">
+                                        </stl:a>
+                                    </li>
+                                </stl:yes>
+                                <stl:no> 
+                                    <li>
+                                        <stl:a class="flex-fill d-flex justify-content-between">
+                                            <span>{channel.title}</span>
+                                            <img src="{Stl.StieUrl}/images/right-icon.png" alt="image">
+                                        </stl:a>
+                                    </li>
+                                </stl:no>
+                            </stl:if>
+                        </stl:channels>
+                    </ul>
+                </div>
+            </div>  
+            <div class="col-lg-9">
+                <div class="row cus-m">
+                    <stl:pageContents pageNum="21" scope="all">
+                        <div class="col-lg-4 col-md-4 col-sm-6 mb-30">
+                            <stl:a class="single-item">
+                                <div class="img-area text-center">
+                                    <stl:image></stl:image>
+                                </div>
+                                <div class="bottom-item text-center">
+                                    <h6>{content.title}</h6>
+                                    <p>{content.subTitle}</p>
+                                </div>
+                            </stl:a>
+                        </div>
+                    </stl:pageContents>
+                </div>
+                <stl:include file="/include/nolist.html"></stl:include>
+                <div class="pagelist">
+                    <stl:pageItems>
+                        <stl:pageItem type="FirstPage">
+                            <stl:yes>
+                                    <a href="{Current.Url}">首页</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>首页</b>
+                            </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="PreviousPage">
+                            <stl:yes>
+                                    <a href="{Current.Url}">上一页</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>上一页</b>
+                            </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="PageNavigation" listNum="3">
+                            <stl:yes>
+                                    <a href="{Current.Url}">{Current.Num}</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>{Current.Num}</b>
+                            </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="NextPage">
+                            <stl:yes>
+                                    <a href="{Current.Url}">下一页</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>下一页</b>
+                            </stl:no>
+                        </stl:pageItem>
+                        <stl:pageItem type="LastPage">
+                            <stl:yes>
+                                    <a href="{Current.Url}">尾页</a>
+                            </stl:yes>	
+                            <stl:no>
+                                    <b>尾页</b>
+                            </stl:no>
+                        </stl:pageItem>
+                    </stl:pageItems>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="policy-section" class="pb-120">
+    <div class="container">
+        <div class="main-content">
+            <div class="row cus-m">
+                <stl:contents channelIndex="ensure">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="single-box text-center">
+                            <div class="img-area text-center">
+                                <stl:image></stl:image>
+                            </div>
+                            <h5>{content.title}</h5>
+                            <p class="text-sm">{content.subtitle}</p>
+                        </div>
+                    </div>
+                </stl:contents>
+            </div>
+        </div>
+    </div>
+</section>
+<stl:include file="/include/footer.html"></stl:include>

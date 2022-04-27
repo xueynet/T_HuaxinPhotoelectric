@@ -1,0 +1,85 @@
+<stl:include file="/include/header.html"></stl:include>
+<stl:include file="/include/breadcrumb.html"></stl:include>
+<div id="shop-content">
+    <div class="container">
+        <div class="shop-details-content">
+            <div class="row justify-content-center cus-pad">
+                <div class="col-lg-6">
+                    <div class="xzoom-container">
+                        <stl:image class="xzoom5" id="xzoom-magnific"></stl:image>
+                        <div class="xzoom-thumbs">
+                            <div class="all-slider">
+                                <stl:each type="ImageUrl">
+                                    <a><stl:image class="xzoom-gallery5"></stl:image></a>
+                                </stl:each>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="right-item">
+                        <h4>{content.title}</h4>
+                        <p>{content.subTitle}</p>
+                        <div class="review">
+                        </div>
+                        <div class="prize mb-30">
+                            <p>{content.OldPrice}{content.PriceUnit}</p>
+                        </div>
+                        <div class="bottom-area d-flex align-items-center">
+                            <h5>{content.Price}{content.PriceUnit}</h5>
+                        </div>
+                        <div class="social d-flex align-items-center">
+                            <p>联系:</p>
+                            <stl:include file="/include/lx.html"></stl:include>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="products-content" class="pb-120">
+    <div class="container">
+        <div class="row">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="description-tab" data-toggle="tab" href="#description" role="tab"
+                        aria-controls="description" aria-selected="true">详情</a>
+                </li>
+                <li class="nav-item" id="iscomments">
+                    <a class="nav-link" id="reviews-tab" data-toggle="tab" href="#reviews" role="tab"
+                        aria-controls="reviews" aria-selected="false">评论</a>
+                </li>
+            </ul>
+            <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="description" role="tabpanel" aria-labelledby="description-tab">
+                    <stl:if type="content" op="NotEmpty">
+                        <stl:yes>
+                            <div class="content whitebox">
+                                {content.content}
+                            </div>
+                        </stl:yes>
+                        <stl:no>
+                            <div class="queshenye">
+                                <img src="/images/nolist.png"/>
+                                <p>暂无内容</p>
+                            </div>
+                        </stl:no>
+                    </stl:if>
+                </div>
+                <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
+                    <div class="comments whitebox" id="iscommentsbox">
+                        <stl:comments></stl:comments>
+                    </div>
+                    <script>
+                        var comments = document.getElementById('iscommentsbox').children
+                        if(comments.length === 0){
+                            document.getElementById('iscomments').remove()
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<stl:include file="/include/footer.html"></stl:include>

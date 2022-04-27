@@ -1,0 +1,114 @@
+<!-- footer-section -->
+<footer id="footer-section">
+  <stl:if Type="ChannelIndex" op="Equals" value="recruit"> 
+    <stl:yes>
+      <div class="overlay">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="footer-top">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-8">
+                                <div class="top-area text-center">
+                                    <h3>加入我们&华鑫光电</h3>
+                                    <p>请认真填写资料，方便后台找到您</p>
+                                </div>
+                                <div class="form">
+                                    <div class="subscribe d-flex mb-30">
+                                        <input id="formName" type="text" placeholder="您的姓名">
+                                        <input id="formMobile" type="number" placeholder="您的手机号">
+                                    </div>
+                                    <div class="subscribe d-flex mb-30">
+                                        <select class="flex-fill" id="formEducation" placeholder="您的学历">
+                                            <option>初中及以下</option>
+                                            <option>高中</option>
+                                            <option>高职</option>
+                                            <option>大专</option>
+                                            <option>本科</option>
+                                            <option>研究生</option>
+                                            <option>硕士</option>
+                                            <option>博士</option>
+                                            <option>博士后</option>
+                                        </select>
+                                        <select class="flex-fill" id="formPosition" placeholder="期望职位">
+                                            <option>一线工人</option>
+                                            <option>开发工程师</option>
+                                            <option>测试工程师</option>
+                                            <option>销售</option>
+                                            <option>后期维护</option>
+                                            <option>秘书</option>
+                                        </select>
+                                    </div>
+                                    <div class="subscribe mb-30">
+                                        <textarea placeholder="请输入您的兴趣爱好，个人介绍，未来规划等"></textarea>
+                                    </div>
+                                    <div class="d-flex">
+                                      <button class="cmn-btn flex-fill text-white">求职</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+    </stl:yes>
+  </stl:if>
+
+  <div class="footer-mid pt-120">
+      <div class="container">
+          <div class="row d-flex">
+              <div class="col-lg-9 col-md-9 d-flex justify-content-md-between justify-content-center align-items-center cus-grid">
+                  <div class="logo-section">
+                      <a class="site-logo site-title" href="/">
+                        <stl:image src="{Stl.SiteImageUrl}" alt="site-logo"></stl:image>
+                      </a>
+                  </div>
+                  <ul class="menu-side d-flex align-items-center">
+                      <stl:channels topLevel="0" groupChannel="footer">
+                        <li><stl:a></stl:a></li>
+                      </stl:channels>
+                  </ul>
+              </div>
+              <div class="col-lg-3 col-md-3 d-flex align-items-center justify-content-center justify-content-md-end">
+                  <div class="right-area">
+                    <stl:include file="/include/lx.html"></stl:include>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+  <div class="footer-bottom">
+      <div class="container">
+          <div class="main-content">
+              <div class="row d-flex align-items-center justify-content-center">
+                  <div class="col-lg-12 col-md-6">
+                      <div class="left-area text-center">
+                          <p>&copy; 2022. {stl.SiteName} 版权所有.<a target="_blank" href="https://beian.miit.gov.cn/">{stl.SiteICP}</a></p>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+
+<!-- javascript-section -->
+<script src="{Stl.StieUrl}/js/jquery-3.5.1.min.js"></script>
+<script src="{Stl.StieUrl}/js/bootstrap.min.js"></script>
+<script src="{Stl.StieUrl}/js/slick.js"></script>
+<script src="{Stl.StieUrl}/js/jquery.nice-select.min.js"></script>
+<script src="{Stl.StieUrl}/js/fontawesome.js"></script>
+<script src="{Stl.StieUrl}/js/countdown.jquery.js"></script>
+<script src="{Stl.StieUrl}/js/jquery.counterup.min.js"></script>
+<script src="{Stl.StieUrl}/js/jquery.waypoints.min.js"></script>
+<script src="{Stl.StieUrl}/js/jquery.magnific-popup.min.js"></script>
+<script src="{Stl.StieUrl}/js/owl.carousel.min.js"></script>
+<script src="{Stl.StieUrl}/js/xzoom.js"></script>
+<script src="{Stl.StieUrl}/js/xzoom-setup.js"></script>
+<script src="{Stl.StieUrl}/js/wow.js"></script>
+<script src="{Stl.StieUrl}/js/main.js?v11"></script>
+
+</body>
+</html>

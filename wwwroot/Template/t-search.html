@@ -1,0 +1,128 @@
+<stl:include file="/include/header.html"></stl:include>
+<section id="banner-section" class="inner-banner">
+    <div class="ani-img">
+        <img class="img-1" src="{Stl.StieUrl}/images/banner-circle-1.png" alt="icon">
+        <img class="img-2" src="{Stl.StieUrl}/images/banner-circle-2.png" alt="icon">
+        <img class="img-3" src="{Stl.StieUrl}/images/banner-circle-2.png" alt="icon">
+    </div>
+    <div class="banner-content d-flex align-items-center">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <div class="main-content">
+                        <h1>搜索</h1>
+                        <div class="breadcrumb-area">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb d-flex justify-content-center">
+                                    <a href="/" class="breadcrumb-item">首页</a>
+                                    <a href="#" class="breadcrumb-item active">搜索</a>
+                                </ol>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="heading-area">
+            <div class="subscribe d-flex">
+                <input type="email" id="searchInput" placeholder="请填写关键字内容">
+                <button class="cmn-btn" onclick="search()">搜索</button>
+                <script>
+                    function search(){
+                        var word = document.getElementById('searchInput').value
+                        window.location.href = "/search.html?word="+ word
+                    }
+                </script>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="all-trophies" class="pt-120 pb-120">
+    <div class="container news">
+        <stl:search type="title,subtitle" isDefaultDisplay="true" isHighlight="true">
+            <stl:pagecontents pageNum="20" scope="all" groupContentNot="nosearch">
+                <stl:a class="single-item col-12">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 d-flex align-items-center">
+                            <stl:if testtype="ImageUrl">
+                                <stl:yes>
+                                    <stl:image class="top-img"></stl:image>
+                                </stl:yes>
+                                <stl:no>
+                                    <img src="{Stl.StieUrl}/images/noimg.png"/>
+                                </stl:no>
+                            </stl:if>
+                        </div>
+                        <div class="col-lg-9 col-md-9">
+                            <div class="mid-area">
+                                <h4 class="mb-30">{content.title}</h4>
+                                <div class="title-bottom mb-30">
+                                    <p>{content.subTitle}</p>
+                                </div>
+                                <div class="d-flex">
+                                    <div class="date-area bg">
+                                        <span class="date">{content.addDate}</span>
+                                    </div>
+                                    <stl:if testtype="author">
+                                        <stl:yes>
+                                            <div class="date-area bg">
+                                                <span class="author">{content.author}</span>
+                                            </div>
+                                        </stl:yes>
+                                    </stl:if>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </stl:a>
+            </stl:pagecontents>
+            <div class="pagelist">
+                <stl:pageItems>
+                    <stl:pageItem type="FirstPage">
+                        <stl:yes>
+                                <a href="{Current.Url}">首页</a>
+                        </stl:yes>	
+                        <stl:no>
+                                <b>首页</b>
+                        </stl:no>
+                    </stl:pageItem>
+                    <stl:pageItem type="PreviousPage">
+                        <stl:yes>
+                                <a href="{Current.Url}">上一页</a>
+                        </stl:yes>	
+                        <stl:no>
+                                <b>上一页</b>
+                        </stl:no>
+                    </stl:pageItem>
+                    <stl:pageItem type="PageNavigation" listNum="3">
+                        <stl:yes>
+                                <a href="{Current.Url}">{Current.Num}</a>
+                        </stl:yes>	
+                        <stl:no>
+                                <b>{Current.Num}</b>
+                        </stl:no>
+                    </stl:pageItem>
+                    <stl:pageItem type="NextPage">
+                        <stl:yes>
+                                <a href="{Current.Url}">下一页</a>
+                        </stl:yes>	
+                        <stl:no>
+                                <b>下一页</b>
+                        </stl:no>
+                    </stl:pageItem>
+                    <stl:pageItem type="LastPage">
+                        <stl:yes>
+                                <a href="{Current.Url}">尾页</a>
+                        </stl:yes>	
+                        <stl:no>
+                                <b>尾页</b>
+                        </stl:no>
+                    </stl:pageItem>
+                </stl:pageItems>
+            </div>
+        </stl:search>
+    </div>
+</section>
+<stl:include file="/include/footer.html"></stl:include>

@@ -1,0 +1,44 @@
+<div class="pagelist">
+    <stl:pageItems>
+        <stl:pageItem type="FirstPage">
+            <stl:yes>
+                    <a href="{Current.Url}">首页</a>
+            </stl:yes>	
+            <stl:no>
+                    <b>首页</b>
+            </stl:no>
+        </stl:pageItem>
+        <stl:pageItem type="PreviousPage">
+            <stl:yes>
+                    <a href="{Current.Url}">上一页</a>
+            </stl:yes>	
+            <stl:no>
+                    <b>上一页</b>
+            </stl:no>
+        </stl:pageItem>
+        <stl:pageItem type="PageNavigation" listNum="3">
+            <stl:yes>
+                    <a href="{Current.Url}">{Current.Num}</a>
+            </stl:yes>	
+            <stl:no>
+                    <b>{Current.Num}</b>
+            </stl:no>
+        </stl:pageItem>
+        <stl:pageItem type="NextPage">
+            <stl:yes>
+                    <a href="{Current.Url}">下一页</a>
+            </stl:yes>	
+            <stl:no>
+                    <b>下一页</b>
+            </stl:no>
+        </stl:pageItem>
+        <stl:pageItem type="LastPage">
+            <stl:yes>
+                    <a href="{Current.Url}">尾页</a>
+            </stl:yes>	
+            <stl:no>
+                    <b>尾页</b>
+            </stl:no>
+        </stl:pageItem>
+    </stl:pageItems>
+</div>
