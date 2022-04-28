@@ -971,11 +971,13 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #available-game-section .main-container .single-item{
     padding: 0 15px;
+    display: flex !important;
 }
 #available-game-section .main-container .single-item a{
     position: relative;
     overflow: hidden;
     border-radius: 10px;
+    margin: 0 auto;
 }
 #available-game-section .main-container .single-item a img{
     position: relative;
@@ -1000,14 +1002,18 @@ body::-webkit-scrollbar-thumb:hover {
     background: #4609C3;
 }
 #available-game-section .main-container .single-item a .main-content .cmn-btn{
-    margin-top:20px;
+    margin-top:5px;
     width: 100%;
-    padding: 11px 0;
+    padding: 10px 0;
     white-space: nowrap;
 }
 #available-game-section .main-container .single-item a .main-content h3{
     color: var(--para-alt-color);
     font-size: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 1.6;
 }
 #available-game-section .main-container .single-item a .main-content p{
     margin: 10px 0;
@@ -1033,6 +1039,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 #available-game-section .slick-initialized .slick-arrow i{
     color: unset;
+    display: none;
 }
 .slick-arrow i{
     color: var(--body-color);
@@ -1815,6 +1822,10 @@ body::-webkit-scrollbar-thumb:hover {
     background-size:100%,cover;
     padding: 300px 0 120px;
     background-position-y: bottom;
+}
+#banner-section.inner-banner.search{
+    padding: 0;
+    padding-top: 150px;
 }
 #banner-section .main-content {
     text-align: center;
@@ -3026,8 +3037,8 @@ body::-webkit-scrollbar-thumb:hover {
     border-radius: 10px;
     padding: 10px;
     max-width: 100%;
-}
-#featured-products .single-item{
+    width: 100%;
+    height: 100%;
     position: relative;
 }
 #featured-products .single-item .new{
@@ -3064,7 +3075,7 @@ body::-webkit-scrollbar-thumb:hover {
     text-transform: uppercase;
     margin: 0 auto;
     width: 100%;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
     text-overflow: ellipsis;
     display: -webkit-box;
     overflow: hidden;
@@ -3851,6 +3862,8 @@ body::-webkit-scrollbar-thumb:hover {
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 5px;
     padding: 30px 5px;
+    width: 100%;
+    height: 100%;
 }
 #policy-section .single-box .img-area{
     background: #3B03AE;
@@ -3868,6 +3881,12 @@ body::-webkit-scrollbar-thumb:hover {
 #policy-section .single-box p{
     color: rgba(0, 250, 223, 0.8);
     text-transform: uppercase;
+    padding: 0 10px;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
 /* Trophies Content Start */
