@@ -1,247 +1,351 @@
 <stl:include file="/include/header.html"></stl:include>
-<!-- banner-section start -->
-<section id="banner-section" class="in" style="background-image: url(/images/banner11.jpg);">
-    <div class="banner-content d-flex align-items-center">
-        <div class="container mb-30">
-            <div class="row justify-content-center mb-30">
-                <div class="col-lg-12">
-                    <div class="main-content">
-                        <div class="top-area justify-content-center text-center">
-                            <h3>{Stl.SiteName}</h3>
-                            <h1>{Stl.Sitesubtitle}</h1>
-                            <p>{Stl.Sitedesc}</p>
-                        </div>
-                        <div class="container">
-                            <div class="testimonials-carousel d-flex align-items-center">
-                                <stl:contents channelIndex="banner" totalNum="6">
-                                    <div class="bottom-item">
-                                        <div class="row">
-                                            <div class="col-lg-5">
-                                                <div class="left-item">
-                                                    <h4>{content.title}</h4>
-                                                    <p>{content.subtitle}</p>
-                                                    <div class="btn-area">
-                                                        <stl:a class="cmn-btn">了解更多</stl:a>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-7">
-                                                <div class="right-area">
-                                                    <stl:image class="img-char" alt="image"></stl:image>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </stl:contents>
+<div class="swiper fillSwiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <div class="swiper indexbanner swiperpage">
+            <div class="swiper-wrapper">
+                <stl:contents channelIndex="banner" totalNum="6">
+                    <div class="swiper-slide swiperpage" style="background-image: url({content.imageUrl});">
+                        <div class="container d-flex align-items-center justify-content-center">
+                            <div class="bannertextbox">
+                                <div>{content.content}</div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </stl:contents>
             </div>
+            <div class="my-banner-mes">
+                <img src="https://hxoptical.xuey.net/sitefiles/library/images/2022/5/47dfe3a248c3648d.png">
+            </div>
+            <div class="swiper-pagination my-pagination-banner"></div>
         </div>
-    </div>
-</section>
-<!-- banner-section end -->
-
-<!-- server start -->
-<section id="available-game-section">
-    <div class="overlay pb-120 mt-30">
-        <div class="container wow fadeInUp">
-            <div class="main-container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-10">
-                        <div class="section-header">
-                            <h2 class="title"><stl:channel channelIndex="server"></stl:channel></h2>
-                            <p><stl:channel channelIndex="server" type="content"></stl:channel></p>
+      </div>
+      <div class="swiper-slide" style="background-image: url(/sitefiles/library/images/2022/5/34f124bfc4f2380f.jpg);">
+        <div class="swiper indexserver swiperpage">
+            <div class="swiper-wrapper">
+                <stl:contents channelIndex="server" totalNum="6">
+                    <div class="swiper-slide serverbox">
+                        <div class="sboxbg"></div>
+                        <div class="sbox">
+                            <div class="icon">
+                                <stl:image></stl:image>
+                            </div>
+                            <h4>{content.title}</h4>
+                            <p>{content.subtitle}</p>
+                            <div class="list">{content.content}</div>
+                            <div class="sboxbtn">立即咨询</div>
                         </div>
                     </div>
-                </div>
-                <div class="available-game-carousel">
-                    <stl:contents channelIndex="server" totalNum="6">
-                        <div class="single-item">
-                            <stl:a>
-                                <stl:image alt="image"></stl:image>
-                                <div class="main-content">
-                                    <h3>{content.title}</h3>
-                                    <div>{content.Summary}</div>
-                                    <span class="cmn-btn">了解更多</span>
+                </stl:contents>
+            </div>
+            <div class="swiper-pagination my-pagination-server"></div>
+        </div>
+      </div>
+      <div class="swiper-slide d-flex align-items-center justify-content-center" style="background-image: url(/sitefiles/library/images/2022/5/9cdb66d4696b4946.jpg);">
+        <div class="casebox container">
+            <div class="casetitle">
+                <h2><stl:channel channelIndex="case"></stl:channel></h2>
+                <p><stl:channel channelIndex="case" type="content"></stl:channel></p>
+            </div>
+            <div class="caseswiper">
+                <div class="swiper indexcase swiperpage">
+                    <div class="swiper-wrapper">
+                        <stl:channels channelIndex="case" totalNum="8">
+                            <div class="swiper-slide" style="background-image: url({channel.imageUrl});">
+                                <div class="casecontent">
+                                    <h4>{channel.title}</h4>
+                                    <p>{channel.content}</p>
                                 </div>
-                            </stl:a>
-                        </div>
-                    </stl:contents>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- server end -->
-
-<!-- case start -->
-<section id="features-section" class="border-area">
-    <div class="overlay pt-120">
-        <div class="container wow fadeInUp">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-header text-center">
-                        <h2 class="title"><stl:channel channelIndex="case"></stl:channel></h2>
-                        <p><stl:channel channelIndex="case" type="content"></stl:channel></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row pm-none" >
-                <stl:channels channelIndex="case" groupChannel="case">
-                    <div class="col-lg-4 col-md-6 col-sm-6">
-                        <stl:a class="single-item text-center col-12">
-                            <div class="img-area">
-                                <stl:image alt="image"></stl:image>
-                            </div>
-                            <h5>{channel.title}</h5>
-                            <p>{channel.content}</p>
-                        </stl:a>
-                    </div>
-                </stl:channels>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- case end -->
-
-<!-- gold server start -->
-<section id="call-to-action">
-    <div class="overlay pt-120 pb-120">
-        <div class="container">
-            <div class="main-content">
-                <div class="row d-sm-flex justify-content-sm-end">
-                    <div class="col-lg-4 col-md-1">
-                        <img class="left" src="{Stl.StieUrl}/images/call-to-action-left.png" alt="image">
-                    </div>
-                    <div class="col-lg-4 col-md-5 col-sm-5 d-flex align-items-center">
-                        <stl:channels totalNum="1" channelIndex="case">
-                            <div class="section-item">
-                                <h4 class="mb-30">{channel.title}</h4>
-                                <p>{channel.content}</p>
                             </div>
                         </stl:channels>
                     </div>
-                    <div class="col-lg-4 col-md-6 col-sm-6 d-flex justify-content-center justify-content-sm-end align-items-center">
-                        <div class="btn-area d-flex justify-content-center justify-content-sm-end align-items-center">
-                            <stl:a channelIndex="case" class="cmn-btn">了解更多</stl:a>
-                        </div>
-                        <img src="{Stl.StieUrl}/images/call-to-action-right.png" alt="image">
-                    </div>
+                    <div class="swiper-pagination my-pagination-case"></div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<!-- gold server end -->
-
-<!-- sale start -->
-<section id="players-week-section">
-    <div class="overlay pt-120 pb-120">
-        <div class="container wow fadeInUp">
-            <div class="row justify-content-center">
-                <div class="col-lg-7 mb-30">
-                    <div class="section-header text-center">
-                        <h2 class="title"><stl:channel channelIndex="sale"></stl:channel></h2>
-                        <p><stl:channel channelIndex="sale" type="content"></stl:channel></p>
-                    </div>
+      </div>
+      <div class="swiper-slide d-flex align-items-center justify-content-center" style="background-image: url(/sitefiles/library/images/2022/5/58729834270e4cb.jpg);">
+        <div class="casebox container">
+            <div class="casetitle d-flex justify-content-between">
+                <div>
+                    <h2>关于我们</h2>
+                    <p>About us</p>
                 </div>
+                <div class="my-pagination-news"></div>
             </div>
-            <div class="tournaments-slide mp-none">
-                <stl:contents channelIndex="sale" totalNum="6">
-                    <div class="single">
-                        <div class="single-item text-center ml-3 mr-3">
-                            <div class="top-level level{content.itemIndex}">
-                                <img class="" src="{Stl.StieUrl}/images/star.png" alt="image">
-                            </div>
-                            <div class="img-area">
-                                <div class="img-wrapper d-flex align-items-center justify-content-center">
-                                    <stl:image ></stl:image>
-                                </div>
-                                <div class="toplevel">{content.itemIndex}</div>
-                            </div>
-                            <stl:a><h5>{content.title}</h5></stl:a>
-                            <p class="date">
-                                <span class="text-sm">{content.Source}</span>
-                            </p>
-                            <p class="text-sm credit">
-                                <span class="text-sm"><img src="{Stl.StieUrl}/images/trophies-icon-2.png" alt="image">{content.Summary}</span>
-                            </p>
-                            <stl:a class="cmn-btn">谈合作</stl:a>
-                        </div>
+            <div class="newsswiper">
+              <div class="swiper indexnews swiperpage">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <div class="row">
+                      <div class="col-lg-5 col-sm-6 col-12">
+                        <stl:contents channelIndex="about" totalNum="1">
+                          <stl:image></stl:image>
+                        </stl:contents>
+                      </div>
+                      <div class="col-lg-7 col-sm-6 col-12">
+                        <stl:contents channelIndex="about" totalNum="1">
+                          <div>{content.content}</div>
+                        </stl:contents>
+                      </div>
                     </div>
+                  </div>
+                  <div class="swiper-slide caseswiper">
+                    <div class="swiper indexnewsnews swiperpage">
+                      <div class="swiper-wrapper">
+                          <stl:contents channelIndex="news" totalNum="8" scope="all">
+                              <div class="swiper-slide" style="background-image: url({content.imageUrl});">
+                                  <stl:a class="casecontent">
+                                      <h4>{content.title}</h4>
+                                      <p>{content.subtitle}</p>
+                                      <p>{content.addDate}</p>
+                                  </stl:a>
+                              </div>
+                          </stl:contents>
+                      </div>
+                      <div class="swiper-pagination my-pagination-newsnews"></div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="swiper indexnewslic swiperpage">
+                      <div class="swiper-wrapper">
+                          <stl:contents channelIndex="licheng" scope="all">
+                              <div class="swiper-slide" style="background-image: url({content.imageUrl});">
+                                  <stl:a class="casecontent">
+                                      <h2>{content.addDate}</h2>
+                                      <h4>{content.title}</h4>
+                                      <p>{content.subtitle}</p>
+                                  </stl:a>
+                              </div>
+                          </stl:contents>
+                      </div>
+                      <div class="swiper-pagination my-pagination-newslic"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      <div class="swiper-slide d-flex align-items-center justify-content-center" style="background-image: url(/sitefiles/library/images/2022/5/eaad98bb27bbdce3.jpg);">
+        <div class="casebox container">
+          <div class="casetitle">
+              <h2><stl:channel channelIndex="partners"></stl:channel></h2>
+              <p><stl:channel channelIndex="partners" type="content"></stl:channel></p>
+          </div>
+          <div class="caseswiper partnerswiper">
+              <div class="swiper indexpartner swiperpage">
+                  <div class="swiper-wrapper">
+                      <stl:contents channelIndex="partners" totalNum="18">
+                          <div class="swiper-slide" style="background-image: url({content.imageUrl});">
+                              <stl:a class="casecontent">
+                                  <h4>{content.title}</h4>
+                                  <p>{content.content}</p>
+                              </stl:a>
+                          </div>
+                      </stl:contents>
+                  </div>
+                  <div class="swiper-pagination my-pagination-partner"></div>
+              </div>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide d-flex align-items-center justify-content-center" style="background-image: url(/sitefiles/library/images/2022/5/dde2eb83dc42220b.jpg);">
+        <div class="casebox container">
+          <div class="caseswiper">
+            <div class="row">
+              <div class="col-lg-6 col-sm-6 col-12">
+                <stl:contents channelIndex="contactus" totalNum="1">
+                  <stl:image></stl:image>
                 </stl:contents>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- sale end -->
-
-<!-- news start -->
-<section id="testimonials-section">
-    <div class="overlay pt-120 mb-30">
-        <div class="container wow fadeInUp">
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="section-header text-center">
-                        <h2 class="title"><stl:channel channelIndex="news"></stl:channel></h2>
-                        <p><stl:channel channelIndex="news" type="content"></stl:channel></p>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonials-slider mp-none">
-                <stl:contents channelIndex="news" totalNum="6" scope="all">
-                    <div class="single">
-                        <stl:a class="single-item text-center" style="background-image: url({content.imageUrl});">
-                            <p>{content.title}</p>
-                            <div class="bottom-area d-flex justify-content-between">
-                                <div class="left-area d-flex">
-                                    <div class="title-area">
-                                        <span>{content.addDate}</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </stl:a>
-                    </div>
+              </div>
+              <div class="col-lg-6 col-sm-6 col-12">
+                <stl:contents channelIndex="contactus" totalNum="1">
+                  <h2>{content.title}</h2>
+                  <h4>{content.subtitle}</h4>
+                  <div>{content.content}</div>
                 </stl:contents>
+              </div>
             </div>
-            <div class="row d-flex justify-content-center mt-30">
-                <div class="col-lg-6 text-center">
-                    <stl:a channelIndex="news" class="cmn-btn">查看更多</stl:a>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
+      <div class="swiper-slide " style="height: auto;">
+        <stl:include file="/include/footer.html"></stl:include>
+      </div>
     </div>
-</section>
-<!-- news end -->
-
-<!-- partners start -->
-<section id="how-works-section" class="border-area">
-    <div class="overlay pt-120 pb-120">
-        <div class="container wow fadeInUp">
-            <div class="row d-flex justify-content-center">
-                <div class="col-lg-6 text-center">
-                    <div class="section-header">
-                        <h2 class="title"><stl:channel channelIndex="partners"></stl:channel></h2>
-                        <p><stl:channel channelIndex="partners" type="content"></stl:channel></p>
-                    </div>
-                </div>
-            </div>
-            <div class="row mp-top partners">
-                <stl:contents channelIndex="partners" total="24">
-                    <div class="col-lg-2 col-md-3 col-sm-4 col-6">
-                        <stl:a class="item">
-                            <stl:image alt="image"></stl:image>
-                            <div class="main-content d-flex justify-content-center align-items-center">
-                                <h3>{content.title}</h3>
-                            </div>
-                        </stl:a>
-                    </div>
-                </stl:contents>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- partners end -->
-<stl:include file="/include/footer.html"></stl:include>
+    <div class="swiper-pagination my-pagination-box"></div>
+  </div>
+<script>
+    var fillSwiper = new Swiper(".fillSwiper", {
+        direction: "vertical",
+        slidesPerView: "auto",
+        followFinger : false,
+        mousewheel: true,
+        speed:800,
+        pagination: {
+          el: ".my-pagination-box",
+          clickable: true,
+          bulletClass : 'my-bullet',
+          bulletActiveClass: 'my-bullet-active',
+        },
+        on:{
+			init:function(swiper){
+		        slide=this.slides.eq(0);
+			    slide.addClass('ani-slide');
+		    },
+			transitionStart: function(){
+			    for(i=0;i<this.slides.length;i++){
+			    	slide=this.slides.eq(i);
+			        slide.removeClass('ani-slide');
+				}
+		    },
+			transitionEnd: function(){
+				slide=this.slides.eq(this.activeIndex);
+			    slide.addClass('ani-slide');
+		    },
+		}
+    });
+    var indexbanner = new Swiper(".indexbanner", {
+        slidesPerView: 1,
+        effect: 'fade',
+        autoplay:true,
+        pagination: {
+          el: ".my-pagination-banner",
+          clickable: true,
+          bulletClass : 'my-bullet',
+          bulletActiveClass: 'my-bullet-active',
+        },
+    });
+    var indexserver = new Swiper(".indexserver", {
+        slidesPerView: 1,
+        pagination: {
+          el: ".my-pagination-server",
+          clickable: true,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          991: {
+            slidesPerView: 4,
+          },
+          1200: {
+            slidesPerView: 5,
+          },
+          1400: {
+            slidesPerView: 6,
+          },
+        },
+    });
+    var indexcase = new Swiper(".indexcase", {
+        slidesPerView: 1,
+        spaceBetween:20,
+        grid: {
+            rows: 2,
+        },
+        pagination: {
+          el: ".my-pagination-case",
+          clickable: true,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          991: {
+            slidesPerView: 4,
+          },
+        },
+    });
+    var indexnews = new Swiper(".indexnews", {
+        slidesPerView: 1,
+        spaceBetween:20,
+        pagination: {
+          el: ".my-pagination-news",
+          clickable: true,
+          renderBullet: function (index, className) {
+            switch(index){
+              case 0: return '<span data-index="'+index+'" class="' + className + '">' + '简介' + "</span>";
+                break;
+              case 1: return '<span data-index="'+index+'" class="' + className + '">' + '动态' + "</span>";
+                break;
+              case 2: return '<span data-index="'+index+'" class="' + className + '">' + '历程' + "</span>";
+                break;
+            }
+          },
+        },
+    });
+    var indexnewsnews = new Swiper(".indexnewsnews", {
+        slidesPerView: 1,
+        spaceBetween:20,
+        grid: {
+            rows: 2,
+        },
+        pagination: {
+          el: ".my-pagination-newsnews",
+          clickable: true,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          991: {
+            slidesPerView: 4,
+          },
+        },
+    });
+    var indexnewslic = new Swiper(".indexnewslic", {
+        slidesPerView: 1,
+        spaceBetween:20,
+        autoplay:true,
+        pagination: {
+          el: ".my-pagination-newslic",
+          clickable: true,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 2,
+          },
+          768: {
+            slidesPerView: 3,
+          },
+          991: {
+            slidesPerView: 4,
+          },
+        },
+    });
+    var indexpartner = new Swiper(".indexpartner", {
+        slidesPerView: 2,
+        spaceBetween:20,
+        grid: {
+            rows: 3,
+        },
+        pagination: {
+          el: ".my-pagination-partner",
+          clickable: true,
+        },
+        breakpoints: {
+          576: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 4,
+          },
+          991: {
+            slidesPerView: 5,
+          },
+        },
+    });
+    $('.my-pagination-news span').hover(function(e){
+      indexnews.slideTo(e.currentTarget.dataset.index, 1000, false);//切换到第一个slide，速度为1秒
+    })
+</script>

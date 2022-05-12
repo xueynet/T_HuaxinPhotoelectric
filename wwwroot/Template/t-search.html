@@ -1,5 +1,5 @@
 <stl:include file="/include/header.html"></stl:include>
-<section id="banner-section" class="inner-banner search">
+<section id="banner-section" class="inner-banner">
     <div class="ani-img">
         <img class="img-1" src="{Stl.StieUrl}/images/banner-circle-1.png" alt="icon">
         <img class="img-2" src="{Stl.StieUrl}/images/banner-circle-2.png" alt="icon">
@@ -10,31 +10,18 @@
             <div class="row justify-content-center">
                 <div class="col-lg-6">
                     <div class="main-content">
-                        <h1>搜索</h1>
-                        <div class="breadcrumb-area">
-                            <nav aria-label="breadcrumb">
-                                <ol class="breadcrumb d-flex justify-content-center">
-                                    <a href="/" class="breadcrumb-item">首页</a>
-                                    <a href="#" class="breadcrumb-item active">搜索</a>
-                                </ol>
-                            </nav>
+                        <div class="subscribe d-flex">
+                            <input type="email" id="searchInput" placeholder="请填写关键字内容">
+                            <button class="cmn-btn" onclick="search()">搜索</button>
+                            <script>
+                                function search(){
+                                    var word = document.getElementById('searchInput').value
+                                    window.location.href = "/search.html?word="+ word
+                                }
+                            </script>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="container">
-        <div class="heading-area">
-            <div class="subscribe d-flex">
-                <input type="email" id="searchInput" placeholder="请填写关键字内容">
-                <button class="cmn-btn" onclick="search()">搜索</button>
-                <script>
-                    function search(){
-                        var word = document.getElementById('searchInput').value
-                        window.location.href = "/search.html?word="+ word
-                    }
-                </script>
             </div>
         </div>
     </div>

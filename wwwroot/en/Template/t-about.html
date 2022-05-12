@@ -23,7 +23,7 @@
     <stl:if testtype="OddItem">
         <stl:yes>
             <stl:contents>
-                <section style="margin: 100px auto;">
+                <section class="pt-120 pb-120">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-5 col-md-5 d-flex align-items-center">
@@ -45,7 +45,7 @@
         </stl:yes>
         <stl:no>
             <stl:contents>
-                <section style="margin: 100px auto;">
+                <section class="pt-120 pb-120">
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-7 col-md-7 d-flex align-items-center">
@@ -101,13 +101,13 @@
             <div class="row pm-none" >
                 <stl:channels channelIndex="case" groupChannel="case">
                     <div class="col-lg-4 col-md-6 col-sm-6">
-                        <div class="single-item text-center">
+                        <stl:a class="single-item text-center col-12">
                             <div class="img-area">
                                 <stl:image alt="image"></stl:image>
                             </div>
                             <h5>{channel.title}</h5>
                             <p>{channel.content}</p>
-                        </div>
+                        </stl:a>
                     </div>
                 </stl:channels>
             </div>
