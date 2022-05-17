@@ -8,7 +8,8 @@
                     <div class="swiper-slide swiperpage" style="background-image: url({content.imageUrl});">
                         <div class="container d-flex align-items-center justify-content-center">
                             <div class="bannertextbox">
-                                <div>{content.content}</div>
+                                <h1>{content.title}</h1>
+                                <h4>{content.subtitle}</h4>
                             </div>
                         </div>
                     </div>
@@ -52,10 +53,10 @@
                     <div class="swiper-wrapper">
                         <stl:channels channelIndex="case" totalNum="8">
                             <div class="swiper-slide" style="background-image: url({channel.imageUrl});">
-                                <div class="casecontent">
+                                <stl:a class="casecontent">
                                     <h4>{channel.title}</h4>
                                     <p>{channel.content}</p>
-                                </div>
+                                </stl:a>
                             </div>
                         </stl:channels>
                     </div>
@@ -112,9 +113,8 @@
                           <stl:contents channelIndex="licheng" scope="all">
                               <div class="swiper-slide" style="background-image: url({content.imageUrl});">
                                   <stl:a class="casecontent">
-                                      <h2>{content.addDate}</h2>
                                       <h4>{content.title}</h4>
-                                      <p>{content.subtitle}</p>
+                                      <h6>{content.subtitle}</h6>
                                   </stl:a>
                               </div>
                           </stl:contents>
@@ -154,12 +154,12 @@
         <div class="casebox container">
           <div class="caseswiper">
             <div class="row">
-              <div class="col-lg-6 col-sm-6 col-12">
+              <div class="col-lg-6 col-sm-6 col-12 left">
                 <stl:contents channelIndex="contactus" totalNum="1">
                   <stl:image></stl:image>
                 </stl:contents>
               </div>
-              <div class="col-lg-6 col-sm-6 col-12">
+              <div class="col-lg-6 col-sm-6 col-12 right">
                 <stl:contents channelIndex="contactus" totalNum="1">
                   <h2>{content.title}</h2>
                   <h4>{content.subtitle}</h4>
@@ -204,7 +204,7 @@
 				slide=this.slides.eq(this.activeIndex);
 			    slide.addClass('ani-slide');
 		    },
-		}
+		  }
     });
     var indexbanner = new Swiper(".indexbanner", {
         slidesPerView: 1,
@@ -216,6 +216,22 @@
           bulletClass : 'my-bullet',
           bulletActiveClass: 'my-bullet-active',
         },
+        on:{
+          init:function(swiper){
+                slide=this.slides.eq(0);
+              slide.addClass('ani-slide-banner');
+            },
+          transitionStart: function(){
+              for(i=0;i<this.slides.length;i++){
+                slide=this.slides.eq(i);
+                  slide.removeClass('ani-slide-banner');
+            }
+            },
+          transitionEnd: function(){
+            slide=this.slides.eq(this.activeIndex);
+              slide.addClass('ani-slide-banner');
+            },
+        }
     });
     var indexserver = new Swiper(".indexserver", {
         slidesPerView: 1,
@@ -343,9 +359,15 @@
           991: {
             slidesPerView: 5,
           },
+          1200: {
+            slidesPerView: 6,
+          },
         },
     });
     $('.my-pagination-news span').hover(function(e){
       indexnews.slideTo(e.currentTarget.dataset.index, 1000, false);//切换到第一个slide，速度为1秒
+    })
+    $('.my-banner-mes').click(function(e){
+      fillSwiper.slideTo(1, 800, false);//切换到第一个slide，速度为1秒
     })
 </script>
