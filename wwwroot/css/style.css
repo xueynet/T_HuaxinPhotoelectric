@@ -3339,14 +3339,13 @@ body::-webkit-scrollbar-thumb:hover {
 .pagelist b{
     padding: 10px 15px;
     background: #4609C3;
-    height: 30px;
-    line-height: 30px;
     color: #fff !important;
     box-shadow: 0 0 10px #00000020;
     border-radius: 5px;
-    margin: 0 5px;
+    line-height: 10px;
+    margin: 0 5px 10px;
     font-size: 14px;
-    display: inline;
+    display: inline-block;
     transition-duration: 300ms;
 }
 .pagelist a:hover{
@@ -4527,6 +4526,9 @@ body::-webkit-scrollbar-thumb:hover {
     #banner-section .banner-content .text-right {
         text-align: center !important;
     }
+    #shop-content {
+        margin-top: -115px;
+    }
     .cmn-btn{
         font-size: 14px;
         line-height: 24px;
@@ -4700,7 +4702,9 @@ body::-webkit-scrollbar-thumb:hover {
 }
 
 @media (max-width: 767px) {
-    
+    #shop-content {
+        margin-top: -55px;
+    }
     .section-header{
         margin-bottom: 40px;
     }
